@@ -1,0 +1,40 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{today | date: 'MMMM, y'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="sourceEvents.length > 0">
+    <ion-item-group>
+      <ion-list-header>
+        <ion-label>Calendar Events</ion-label>
+      </ion-list-header>
+    
+      <ion-item *ngFor="let event of sourceEvents" (click)="viewEvent(event)">
+        <div class="radio__icon__div">
+          <ion-icon class="radio__icon" name="radio-button-on" slot="start"></ion-icon>
+        </div>
+        <ion-label>
+          <div class="events__name">
+            <h2 slot="start">{{event.title}}</h2>
+            <p slot="end">{{event.start | date: 'MMMM d, y'}}</p>
+          </div>
+          <div class="events__location">
+            <p>{{event.location}}</p>
+            <p slot="end" class="endDate">{{event.end | date: 'MMMM d, y'}}</p>
+          </div>
+        </ion-label>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-item lines="none" text-center *ngIf="sourceEvents.length === 0">
+    <p class="no__event__today">
+      No events
+    </p>
+  </ion-item>
+</ion-content>

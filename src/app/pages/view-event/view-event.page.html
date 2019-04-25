@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>View Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngIf="events">
+    <ion-list>
+      <ion-list-header>
+        <ion-label>{{events.title}}</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-icon name="pin"></ion-icon>
+        <ion-label>{{events.location}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="time"></ion-icon>
+        <ion-label class="time__label" *ngIf="eventIsToday">
+          Today from
+          <p class="p1">
+            {{events.start | date: 'shortTime'}} 
+            - {{events.end | date: 'shortTime'}}
+          </p>
+        </ion-label>
+        <ion-label class="time__label" *ngIf="!eventIsToday">
+          {{events.start | date: 'MMM d, y'}}
+          <p class="p1">
+              {{events.start | date: 'shortTime'}} 
+              - {{events.end | date: 'shortTime'}}
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="alarm"></ion-icon>
+        <ion-label class="time__label">
+          All day event?
+          <p class="p1">{{events.allDay}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="notifications"></ion-icon>
+        <ion-label class="time__label">
+          Remind
+          <p class="p1">{{events.remind}} minutes before</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <ion-item lines="none" text-center *ngIf="!events">
+    <p class="no__event__today">
+      No event
+    </p>
+  </ion-item>
+</ion-content>
+
+<ion-footer no-border>
+  <ion-toolbar class="footer__toolbar">
+    <ion-tab-bar>
+      <ion-tab-button (click)="deleteEvent(events)">
+        <ion-label>Delete</ion-label>
+        <ion-icon name="trash"></ion-icon>
+      </ion-tab-button>
+  
+    </ion-tab-bar>
+  </ion-toolbar>
+</ion-footer>
+  

@@ -1,0 +1,50 @@
+ion-header {
+    ion-title {
+        margin: 0 auto !important;
+        text-align: center !important;
+        color: #8b8686 !important;
+    }
+
+    ion-buttons {
+        color: #4aa1f3;
+        .close {
+            margin-left: 8px;
+            font-size: 20px;
+        }
+
+        .checkmark {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+    }
+}
+
+ion-content {
+    ion-card {
+        border: none;
+        box-shadow: none !important;
+    }
+
+    ion-label {
+        color: #8b8686;
+    }
+
+    ion-datetime {
+        color: #8b8686;
+    }
+
+    .time__label {
+        display: flex;
+    
+        .p1 {
+            margin-left: auto;
+            width: 100%;
+        }
+    }
+}
+
+ion-alert {
+    .alert-message {
+        color: #8b8686 !important;
+    }
+}

@@ -1,0 +1,60 @@
+ion-header {
+    ion-title {
+        text-align: left !important;
+        color: #8b8686 !important;
+    }
+
+    .sc-ion-back-button-md {
+        color: #8b8686 !important;
+    }
+}
+
+ion-content {
+    ion-list-header {
+        background-color: #4aa1f3;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .radio__icon__div {
+        margin-right: 16px;
+        margin-top: -16px !important;
+    }
+
+    .events__name {
+        display: flex;
+
+        p {
+            margin-left: auto;
+            color: #8b8686 !important;
+        }
+    }
+
+    .events__location {
+        color: #8b8686 !important;
+        display: flex;
+
+        .endDate {
+            margin-left: auto;
+        }
+    }
+
+    .no__event__today {
+        color: #8b8686 !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .radio__icon {
+        width: 12px;
+        color: #4aa1f3 !important;
+    }
+
+    .h1__btn {
+        margin: 0 auto !important;
+        text-align: center;
+        font-size: 16px;
+        color: #4aa1f3;
+    }
+}

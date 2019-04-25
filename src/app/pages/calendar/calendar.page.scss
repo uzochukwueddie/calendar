@@ -1,0 +1,204 @@
+ion-header {
+    ion-title {
+        margin: 0 auto !important;
+        text-align: center !important;
+        color: #8b8686 !important;
+    }
+}
+
+ion-content {
+    .event-detail-container {
+        display: none !important;
+    }
+
+    .events-lists {
+        display: block !important;
+        // max-height: 320px;
+        // overflow-y: scroll;
+    }
+
+    .radio__icon__div {
+        margin-right: 16px;
+        margin-top: -16px !important;
+    }
+
+    .events__name {
+        display: flex;
+
+        p {
+            margin-left: auto;
+            color: #8b8686 !important;
+        }
+    }
+
+    .events__location {
+        color: #8b8686 !important;
+        display: flex;
+
+        .endDate {
+            margin-left: auto;
+        }
+    }
+
+    .no__event__today {
+        color: #8b8686 !important;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .radio__icon {
+        width: 12px;
+        color: #4aa1f3 !important;
+    }
+
+    .h1__btn {
+        margin: 0 auto !important;
+        text-align: center;
+        font-size: 16px;
+        color: #4aa1f3;
+    }
+
+    .bg-pink {
+        background-color: hotpink !important;
+        color: white !important;
+
+        .cal-day-number {
+            color: white !important;
+        }
+    }
+
+    ion-icon {
+        color: #4aa1f3;
+    }
+
+    .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+        font-size: 1.3em !important;
+        font-weight: 500;
+        color: white !important;
+    }
+    
+    mwl-calendar-month-cell {
+        min-height: 50px !important;
+        .cal-cell-top {
+            min-height: 50px !important;
+        }
+        .cal-day-badge {
+            display: none !important;
+        }
+        .cal-events {
+            display: none !important;
+        }
+
+        .cal-day-number {
+            color: black !important;
+            height: 20px !important;
+        }
+    }
+
+    mwl-calendar-month-view {
+        .cal-today {
+            background-color: #4aa1f3 !important;
+            color: white !important;
+        }
+
+        .cal-future {
+            color: #4aa1f3 !important;
+            height: 30px !important;
+        }
+
+        .cal-past {
+            color: #4aa1f3 !important;
+            height: 30px !important;
+        }
+
+        .cal-weekend {
+            height: 30px !important;
+            // color: #4aa1f3 !important;
+        }
+
+        .cal-month-view .cal-day-cell.cal-today .cal-day-number {
+            font-size: 1.9em;
+            font-weight: 500;
+        }
+    }
+
+    mwl-calendar-week-view {
+        .cal-today {
+            background-color: #4aa1f3 !important;
+            color: white !important;
+            span {
+                display: none !important;
+            }
+        }
+
+        .cal-future {
+            color: #4aa1f3 !important;
+            height: 40px !important;
+            span {
+                display: none !important;
+            }
+        }
+
+        .cal-past {
+            color: #4aa1f3 !important;
+            height: 30px !important;
+            span {
+                display: none !important;
+            }
+        }
+
+        .cal-weekend {
+            height: 40px !important;
+            span {
+                display: none !important;
+            }
+        }
+
+        .cal-time {
+            color: #8b8686 !important;
+            font-weight: 400 !important;
+        }
+    }
+
+    mwl-calendar-day-view {
+        .cal-time {
+            color: #8b8686 !important;
+            font-weight: 400 !important;
+        }
+    }
+
+}
+
+ion-footer {
+    margin-bottom: 20px;
+
+    ion-label {
+        color: #8b8686 !important;
+    }
+
+    ion-icon {
+        color: #4aa1f3;
+    }
+    
+    ion-tab-bar {
+        border-radius: 40px;
+        border: 1px solid #ededed;
+        width: 94%;
+        margin: 0 auto;
+        text-align: center;
+        height: 44px;
+        -webkit-box-shadow: 0 8px 6px -6px #ededed;
+	   -moz-box-shadow: 0 8px 6px -6px #ededed;
+        box-shadow: 0 8px 6px -6px #ededed;
+    }
+
+    ion-tab-button {
+        --ripple-color: white;
+    }
+}
+
+ion-alert {
+    .alert-message {
+        color: #8b8686 !important;
+    }
+}

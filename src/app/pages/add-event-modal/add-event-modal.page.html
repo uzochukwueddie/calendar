@@ -1,0 +1,53 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-icon class="close" name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title>New Event</ion-title>
+    <ion-buttons slot="end" (click)="sendEvent()">
+      <ion-icon class="checkmark" name="checkmark"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-input type="text" placeholder="Title" [(ngModel)]="event.title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Location" [(ngModel)]="event.location"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Description" [(ngModel)]="event.description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Start</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" [(ngModel)]="event.start" [min]=""></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>End</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" [(ngModel)]="event.end" [min]=""></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>All Day?</ion-label>
+        <ion-checkbox [(ngModel)]="event.allDay"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="time__label">
+          Remind
+        </ion-label>
+        <ion-select placeholder="Select One" class="p1" [(ngModel)]="event.remind">
+          <ion-select-option value="10">10 miutes before</ion-select-option>
+          <ion-select-option value="15">15 miutes before</ion-select-option>
+          <ion-select-option value="30">30 miutes before</ion-select-option>
+          <ion-select-option value="60">1 hour before</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
